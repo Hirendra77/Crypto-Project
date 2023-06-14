@@ -12,6 +12,7 @@ import { removeFromWatchlist } from '../../../functions/removeFromWatchlist';
 import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 import { hasBeenAdded } from '../../../functions/hasBeenAdded';
+
 function List({coin}) {
   const [added, setAdded] = useState(hasBeenAdded(coin.id));
   return (

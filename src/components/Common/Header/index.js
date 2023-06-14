@@ -23,7 +23,7 @@ function Header() {
         <Link to="/dashboard">
            <Button text={"Dashboard"} 
            outlined={true}
-           onclick={()=>console.log("Btn clicked")}></Button>
+           onClick={()=>console.log("Btn clicked")}></Button>
             </Link>
     </div>
     <div className="mobile-drawer">
