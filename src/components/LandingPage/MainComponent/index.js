@@ -4,8 +4,10 @@ import iphone from "../../../assets/iphone.png"
 import gradient from "../../../assets/gradient.png"
 import "./styles.css";
 import {motion} from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 function MainComponent() {
+    const navigate = useNavigate();
   return (
     <div className='flex-info'>
         <div className='left-component'>
@@ -33,8 +35,8 @@ function MainComponent() {
             animate={{ opacity:1, x: 1 }} 
             transition={{ duration: 0.5, delay: 1.5}}
             >
-                <Button text={"Dashboard"} />
-                <Button text={"share"} outlined={true}/>
+                <Button text={"Dashboard"} onClick={()=>{navigate("/dashboard")}} />
+                <Button text={"share"} outlined={true} onClick={()=>{console.log("hi")}}/>
             </motion.div>
         </div>
         <div className='phone-container'>

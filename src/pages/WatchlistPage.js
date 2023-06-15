@@ -50,7 +50,7 @@ function WatchlistPage() {
           )}
         </div>
       )}
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -34,11 +34,11 @@ function CoinPage() {
         if (data) {
             coinObject(setCoinData, data)
             const prices = await getCoinPrices(id, days, priceType) ?? [];
-            console.log("Prices Fetched 1>>>",prices)
+            console.log("Prices Fetched 1>>>", prices)
             if (prices) {
                 settingChartData(setChartData, prices)
                 setIsLoading(false);
-                console.log("Prices Fetched>>>",prices)
+                console.log("Prices Fetched>>>", prices)
             }
         }
         setIsLoading(false);
@@ -46,7 +46,7 @@ function CoinPage() {
     const handleDaysChange = async (event) => {
         setIsLoading(true);
         setDays(event.target.value);
-        const prices = await getCoinPrices(id, event.target.value,priceType);
+        const prices = await getCoinPrices(id, event.target.value, priceType);
         if (prices) {
             settingChartData(setChartData, prices)
             setIsLoading(false);
@@ -79,7 +79,7 @@ function CoinPage() {
             </>
             )}
             <Footer />
-            </div>
+        </div>
     )
 }
 

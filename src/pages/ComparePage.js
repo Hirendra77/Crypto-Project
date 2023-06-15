@@ -94,7 +94,7 @@ function ComparePage() {
     return (
         <div>
             <Header />
-            {isLoading || !crypto1Data || !crypto2Data || !chartData ?          
+            {isLoading || !crypto1Data || !crypto2Data || !chartData ?
                 (<Loader />) : (
                     <>
                         <div className='coins-days-flex'>
@@ -129,7 +129,7 @@ function ComparePage() {
                         <CoinInfo heading={crypto2Data.name} desc={crypto2Data.desc} />
                     </>
                 )}
-                <Footer />
+            <Footer />
         </div>
     );
 }

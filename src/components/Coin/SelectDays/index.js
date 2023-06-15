@@ -1,10 +1,10 @@
-import  React, { useState } from 'react';
+import React, { useState } from 'react';
 
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import "./styles.css"
 
-export default function SelectDays({days, handleDaysChange, noPTag}) {
+export default function SelectDays({ days, handleDaysChange, noPTag }) {
 
   return (
 
@@ -12,36 +12,36 @@ export default function SelectDays({days, handleDaysChange, noPTag}) {
       {!noPTag &&
         <p>Price change in</p>}
 
-        <Select
-         sx={{
-            height: "2.5rem",
+      <Select
+        sx={{
+          height: "2.5rem",
+          color: "var(--white)",
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "var(--white)",
+          },
+          "& .MuiSvgIcon-root": {
             color: "var(--white)",
-            "& .MuiOutlinedInput-notchedOutline": {
-              borderColor: "var(--white)",
+          },
+          "&:hover": {
+            "&& fieldset": {
+              borderColor: "#3a80e9",
             },
-            "& .MuiSvgIcon-root": {
-              color: "var(--white)",
-            },
-            "&:hover": {
-              "&& fieldset": {
-                borderColor: "#3a80e9",
-              },
-            },
-          }}
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={days}
-          label="Days"
-          onChange={handleDaysChange}
-        >
-            <MenuItem value={7}>7 Days</MenuItem>
-          <MenuItem value={30}>30 Days</MenuItem>
-          <MenuItem value={60}>60 Days</MenuItem>
-          <MenuItem value={90}>90 Days</MenuItem>
-          <MenuItem value={120}>120 Days</MenuItem>
-          <MenuItem value={365}>1 Year</MenuItem>
-        </Select>
-      
+          },
+        }}
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        value={days}
+        label="Days"
+        onChange={handleDaysChange}
+      >
+        <MenuItem value={7}>7 Days</MenuItem>
+        <MenuItem value={30}>30 Days</MenuItem>
+        <MenuItem value={60}>60 Days</MenuItem>
+        <MenuItem value={90}>90 Days</MenuItem>
+        <MenuItem value={120}>120 Days</MenuItem>
+        <MenuItem value={365}>1 Year</MenuItem>
+      </Select>
+
     </div>
   );
 }

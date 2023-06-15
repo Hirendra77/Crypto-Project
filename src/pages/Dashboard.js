@@ -38,36 +38,36 @@ function DashboardPage() {
         //   .then((data)=>{});
         getData();
     }, []);
-    const getData = async ()=>{
-        const  myCoins = await get100Coins()
-        if (myCoins){
+    const getData = async () => {
+        const myCoins = await get100Coins()
+        if (myCoins) {
             setCoins(myCoins);
             setPaginatedCoins(myCoins.slice(0, 10))
             setIsLoading(false);
         }
-       
-       };
+
+    };
     return (
         <>
-        <Header />
-        <BackToTop/>
-        {isLoading?(<Loader/>
-        ):(
-        <div> 
-            <Search search={search} onSearchChange={onSearchChange} />
-            <TabsComponent
-                coins={search ? filteredCoins : paginatedCoins}
-                setSearch={setSearch}
-            />
-            {!search && (
-                <PaginationComponent
-                    page={page}
-                    handlePageChange={handlePageChange}
-                />
+            <Header />
+            <BackToTop />
+            {isLoading ? (<Loader />
+            ) : (
+                <div>
+                    <Search search={search} onSearchChange={onSearchChange} />
+                    <TabsComponent
+                        coins={search ? filteredCoins : paginatedCoins}
+                        setSearch={setSearch}
+                    />
+                    {!search && (
+                        <PaginationComponent
+                            page={page}
+                            handlePageChange={handlePageChange}
+                        />
+                    )}
+                </div>
             )}
-        </div>
-        )}
-        <Footer />
+            <Footer />
         </>
     );
 }
