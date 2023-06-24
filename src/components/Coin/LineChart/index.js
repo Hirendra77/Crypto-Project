@@ -5,7 +5,7 @@ import { convertNumber } from "../../../functions/convertNumber";
 
 
 function LineChart({ chartData, priceType, multiAxis }) { 
-  
+
   const options = {
     plugins: {
       legend: {
@@ -23,7 +23,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
         position: "left",
         ticks: {
           // Include a dollar sign in the ticks
-          callback: function (value, index, ticks) {
+          callback: function (value) {
             if (priceType == "prices")
               return '$' + value.toLocaleString();
             else {

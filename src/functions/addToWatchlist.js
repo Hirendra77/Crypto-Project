@@ -12,6 +12,6 @@ export const addToWatchlist = (id) => {
     localStorage.setItem("watchlist", arr);
   }
   toast.success(
-    `${id.slice(0, 1).toUpperCase() + id.slice(1)} - Added To The Watchlist!`
+    `${id.slice(0, 1).toUpperCase() + id.slice(1)} - "Added To The Watchlist!"`
   );
 };
