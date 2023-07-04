@@ -38,18 +38,21 @@
     position: relative;
     padding: 1rem;
 }
+
 .iphone{
     position: absolute;
     z-index: 50;
     min-width: 300px;
     width: 50%;
+    height: 500px;
     right: 0;
 }
 .gradient{
     position: absolute;
     min-width: 250px;
     width: 40%;
-    top: 8rem;
+    height: 380px;
+    top: 5rem;
     right: 0;
 }
 
