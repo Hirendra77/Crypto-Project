@@ -32,7 +32,7 @@ function ComparePage() {
         setIsLoading(false);
     }
 
-    const handlePriceTypeChange = async (event, newType) => {
+    const handlePriceTypeChange = async (newType) => {
         setIsLoading(true);
         setPriceType(newType);
         const prices1 = await getCoinPrices(crypto1, days, newType);
@@ -54,7 +54,7 @@ function ComparePage() {
             coinObject(setCrypto1Data, data1)
 
             if (data2) {
-                coinObject(setCrypto1Data, data2)
+                coinObject(setCrypto2Data, data2)
                 const prices1 = await getCoinPrices(crypto1, days, priceType);
                 const prices2 = await getCoinPrices(crypto2, days, priceType);
                 settingChartData(setChartData, prices1, prices2);
@@ -77,6 +77,7 @@ function ComparePage() {
                 setIsLoading(false);
             }
         } else {
+            
             setCrypto1(event.target.value);
             const data = await getCoinData(event.target.value);
             coinObject(setCrypto1Data, data);
